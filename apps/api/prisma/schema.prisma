@@ -1,0 +1,76 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("POSTGRES_URL")
+}
+
+model User {
+  id           String   @id @default(uuid())
+  email        String   @unique
+  passwordHash String
+  firstName    String?
+  lastName     String?
+  roles        UserRole[]
+  sessions     Session[]
+  courses      Course[] @relation("CourseOwner")
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Role {
+  id          String    @id @default(uuid())
+  name        String    @unique
+  description String?
+  users       UserRole[]
+}
+
+model UserRole {
+  userId String
+  roleId String
+
+  user User @relation(fields: [userId], references: [id])
+  role Role @relation(fields: [roleId], references: [id])
+
+  @@id([userId, roleId])
+}
+
+model Session {
+  token     String  @id
+  userId    String
+  user      User    @relation(fields: [userId], references: [id])
+  createdAt DateTime @default(now())
+  expiresAt DateTime?
+}
+
+model Course {
+  id          String    @id @default(uuid())
+  title       String
+  description String?
+  ownerId     String
+  owner       User      @relation("CourseOwner", fields: [ownerId], references: [id])
+  sections    Section[]
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model Section {
+  id        String   @id @default(uuid())
+  title     String
+  courseId  String
+  course    Course   @relation(fields: [courseId], references: [id])
+  activities Activity[]
+  order     Int
+}
+
+model Activity {
+  id        String   @id @default(uuid())
+  title     String
+  type      String
+  sectionId String
+  section   Section  @relation(fields: [sectionId], references: [id])
+  metadata  Json?
+  order     Int
+}

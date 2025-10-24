@@ -1,0 +1,34 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "NovaLMS API",
+    "version": "0.1.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3001/api/v1"
+    }
+  ],
+  "paths": {
+    "/auth/login": {
+      "post": {
+        "summary": "Inicia sesión y genera tokens JWT",
+        "responses": {
+          "200": {
+            "description": "Autenticación exitosa"
+          }
+        }
+      }
+    },
+    "/courses": {
+      "get": {
+        "summary": "Lista cursos disponibles",
+        "responses": {
+          "200": {
+            "description": "Lista de cursos"
+          }
+        }
+      }
+    }
+  }
+}

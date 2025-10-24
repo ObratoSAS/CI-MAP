@@ -1,0 +1,22 @@
+{
+  "landing": {
+    "title": "Learn, teach and collaborate with NovaLMS",
+    "subtitle": "An accessible and customizable platform to manage courses, assessments and learning communities.",
+    "ctaExplore": "Browse catalog",
+    "ctaLogin": "Sign in",
+    "features": {
+      "courses": {
+        "title": "Flexible courses",
+        "description": "Organize content by sections, control visibility and handle enrollments effortlessly."
+      },
+      "assessments": {
+        "title": "Advanced assessments",
+        "description": "Build quizzes, assignments and rubrics with real-time progress tracking."
+      },
+      "analytics": {
+        "title": "Actionable analytics",
+        "description": "Get completion, attendance and question quality reports to make informed decisions."
+      }
+    }
+  }
+}

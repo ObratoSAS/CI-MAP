@@ -1,0 +1,17 @@
+{
+  "name": "nova-lms",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@8.15.4",
+  "scripts": {
+    "build": "pnpm -r --parallel build",
+    "dev": "pnpm --filter @novalms/web dev",
+    "lint": "pnpm -r lint",
+    "test": "pnpm -r test",
+    "format": "pnpm --filter @novalms/web format",
+    "typecheck": "pnpm -r typecheck"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
