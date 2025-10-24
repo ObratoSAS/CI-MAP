@@ -1,0 +1,14 @@
+{
+  "content": "Contenido",
+  "participants": "Participantes",
+  "grades": "Calificaciones",
+  "announcements": "Anuncios",
+  "sections": "Secciones",
+  "activities": "Actividades",
+  "enroll": "Inscribirse",
+  "status": {
+    "open": "Abierto",
+    "closed": "Cerrado",
+    "submitted": "Entregado"
+  }
+}

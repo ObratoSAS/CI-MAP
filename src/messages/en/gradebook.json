@@ -1,0 +1,11 @@
+{
+  "title": "Gradebook",
+  "filters": {
+    "group": "Group",
+    "export": "Export CSV"
+  },
+  "columns": {
+    "student": "Student",
+    "average": "Average"
+  }
+}

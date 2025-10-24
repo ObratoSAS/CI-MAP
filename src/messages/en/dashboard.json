@@ -1,0 +1,23 @@
+{
+  "title": "Dashboard",
+  "student": {
+    "headline": "Your learning overview",
+    "courses": "Enrolled courses",
+    "progress": "Progress",
+    "upcoming": "Upcoming activities",
+    "notifications": "Notifications"
+  },
+  "teacher": {
+    "headline": "Teaching space",
+    "courses": "Courses you teach",
+    "shortcuts": "Quick actions",
+    "submissions": "Recent submissions"
+  },
+  "admin": {
+    "headline": "Administrative insights",
+    "users": "Users",
+    "courses": "Courses",
+    "activities": "Activities",
+    "manage": "Manage platform"
+  }
+}

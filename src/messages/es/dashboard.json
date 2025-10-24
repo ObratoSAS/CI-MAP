@@ -1,0 +1,23 @@
+{
+  "title": "Tablero",
+  "student": {
+    "headline": "Tu resumen de aprendizaje",
+    "courses": "Cursos inscritos",
+    "progress": "Progreso",
+    "upcoming": "Próximas actividades",
+    "notifications": "Notificaciones"
+  },
+  "teacher": {
+    "headline": "Espacio docente",
+    "courses": "Cursos que impartes",
+    "shortcuts": "Accesos directos",
+    "submissions": "Entregas recientes"
+  },
+  "admin": {
+    "headline": "Vista administrativa",
+    "users": "Usuarios",
+    "courses": "Cursos",
+    "activities": "Actividades",
+    "manage": "Gestionar plataforma"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "title": "Course catalog",
+  "search": "Search courses",
+  "filters": {
+    "category": "Category",
+    "modality": "Modality",
+    "price": "Price"
+  },
+  "price": {
+    "free": "Free",
+    "paid": "Paid"
+  },
+  "modality": {
+    "online": "Online",
+    "hybrid": "Hybrid",
+    "onsite": "On-site"
+  },
+  "empty": "No courses match your filters.",
+  "description": "Filter and enrol in courses curated for hybrid learning teams."
+}

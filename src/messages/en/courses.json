@@ -1,0 +1,14 @@
+{
+  "content": "Content",
+  "participants": "Participants",
+  "grades": "Grades",
+  "announcements": "Announcements",
+  "sections": "Sections",
+  "activities": "Activities",
+  "enroll": "Enroll",
+  "status": {
+    "open": "Open",
+    "closed": "Closed",
+    "submitted": "Submitted"
+  }
+}
