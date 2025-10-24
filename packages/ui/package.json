@@ -1,0 +1,34 @@
+{
+  "name": "@novalms/ui",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.tsx --dts",
+    "dev": "tsup src/index.tsx --watch",
+    "test": "vitest",
+    "lint": "eslint \"src/**/*.tsx\"",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "dependencies": {
+    "clsx": "2.1.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "6.2.0",
+    "@testing-library/react": "14.2.1",
+    "@types/node": "20.11.16",
+    "@types/react": "18.2.48",
+    "@types/react-dom": "18.2.18",
+    "@vitejs/plugin-react": "4.2.1",
+    "eslint": "8.56.0",
+    "tsup": "7.2.0",
+    "typescript": "5.3.3",
+    "vitest": "1.2.2"
+  }
+}

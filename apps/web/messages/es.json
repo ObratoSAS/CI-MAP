@@ -1,0 +1,22 @@
+{
+  "landing": {
+    "title": "Aprende, enseña y colabora con NovaLMS",
+    "subtitle": "Una plataforma accesible y personalizable para gestionar cursos, evaluaciones y comunidades de aprendizaje.",
+    "ctaExplore": "Explorar catálogo",
+    "ctaLogin": "Iniciar sesión",
+    "features": {
+      "courses": {
+        "title": "Cursos flexibles",
+        "description": "Organiza contenidos por secciones, controla la visibilidad y gestiona inscripciones con facilidad."
+      },
+      "assessments": {
+        "title": "Evaluaciones avanzadas",
+        "description": "Crea cuestionarios, tareas y rúbricas con seguimiento en tiempo real del progreso estudiantil."
+      },
+      "analytics": {
+        "title": "Analítica accionable",
+        "description": "Obtén reportes de finalización, asistencia y calidad de preguntas para tomar decisiones informadas."
+      }
+    }
+  }
+}
