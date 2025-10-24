@@ -1,0 +1,23 @@
+{
+  "title": "Administration",
+  "users": {
+    "title": "Users",
+    "create": "Add user"
+  },
+  "courses": {
+    "title": "Courses",
+    "create": "Create course"
+  },
+  "categories": {
+    "title": "Categories",
+    "create": "New category"
+  },
+  "roles": {
+    "title": "Roles & permissions",
+    "matrix": "Permissions matrix"
+  },
+  "themes": {
+    "title": "Branding",
+    "upload": "Upload logo"
+  }
+}

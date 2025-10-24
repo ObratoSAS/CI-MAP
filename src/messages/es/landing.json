@@ -1,0 +1,16 @@
+{
+  "hero": {
+    "title": "Reimagina el aprendizaje colaborativo",
+    "subtitle": "Aurora LMS potencia a las instituciones con experiencias modernas e inclusivas inspiradas en Moodle y construidas con tecnología actual.",
+    "cta": "Explorar cursos"
+  },
+  "benefits": {
+    "title": "Por qué elegir Aurora",
+    "items": [
+      "Tableros personalizados para cada rol",
+      "Comunicación y calendario integrados",
+      "Analítica y gestión de calificaciones"
+    ]
+  },
+  "cardDescription": "Un itinerario curado que combina actividades colaborativas, sesiones sincrónicas y analítica accionable."
+}

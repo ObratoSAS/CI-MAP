@@ -1,0 +1,23 @@
+{
+  "title": "Administración",
+  "users": {
+    "title": "Usuarios",
+    "create": "Agregar usuario"
+  },
+  "courses": {
+    "title": "Cursos",
+    "create": "Crear curso"
+  },
+  "categories": {
+    "title": "Categorías",
+    "create": "Nueva categoría"
+  },
+  "roles": {
+    "title": "Roles y permisos",
+    "matrix": "Matriz de permisos"
+  },
+  "themes": {
+    "title": "Identidad visual",
+    "upload": "Subir logo"
+  }
+}

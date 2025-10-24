@@ -1,0 +1,10 @@
+{
+  "landing": "Inicio",
+  "catalog": "Catálogo",
+  "dashboard": "Tablero",
+  "calendar": "Calendario",
+  "messages": "Mensajes",
+  "admin": "Admin",
+  "logout": "Salir",
+  "login": "Ingresar"
+}

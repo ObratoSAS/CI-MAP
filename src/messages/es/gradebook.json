@@ -1,0 +1,11 @@
+{
+  "title": "Calificador",
+  "filters": {
+    "group": "Grupo",
+    "export": "Exportar CSV"
+  },
+  "columns": {
+    "student": "Estudiante",
+    "average": "Promedio"
+  }
+}

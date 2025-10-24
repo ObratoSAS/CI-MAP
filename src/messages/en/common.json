@@ -1,0 +1,33 @@
+{
+  "brand": "Aurora LMS",
+  "actions": {
+    "viewAll": "View all",
+    "loadMore": "Load more",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "create": "Create",
+    "submit": "Submit",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "filter": "Filter",
+    "download": "Download"
+  },
+  "status": {
+    "loading": "Loading...",
+    "empty": "Nothing to show yet.",
+    "error": "We could not load this section. Please try again."
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "languages": {
+    "es": "Spanish",
+    "en": "English"
+  }
+}

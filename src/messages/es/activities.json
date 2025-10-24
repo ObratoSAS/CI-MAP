@@ -1,0 +1,26 @@
+{
+  "assignment": {
+    "title": "Tarea",
+    "submit": "Enviar tarea",
+    "upload": "Subir archivo",
+    "status": "Estado de entrega",
+    "feedback": "Retroalimentación"
+  },
+  "quiz": {
+    "title": "Cuestionario",
+    "start": "Iniciar intento",
+    "timer": "Tiempo restante",
+    "submit": "Enviar cuestionario",
+    "review": "Revisar intento"
+  },
+  "forum": {
+    "title": "Foro",
+    "newThread": "Nuevo hilo",
+    "reply": "Responder",
+    "moderation": "Moderación"
+  },
+  "resource": {
+    "title": "Recurso",
+    "download": "Descargar"
+  }
+}

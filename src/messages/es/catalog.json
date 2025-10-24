@@ -1,0 +1,20 @@
+{
+  "title": "Catálogo de cursos",
+  "search": "Buscar cursos",
+  "filters": {
+    "category": "Categoría",
+    "modality": "Modalidad",
+    "price": "Precio"
+  },
+  "price": {
+    "free": "Gratuito",
+    "paid": "De pago"
+  },
+  "modality": {
+    "online": "En línea",
+    "hybrid": "Híbrido",
+    "onsite": "Presencial"
+  },
+  "empty": "No hay cursos que coincidan con tus filtros.",
+  "description": "Filtra e inscríbete en cursos pensados para equipos de aprendizaje híbrido."
+}

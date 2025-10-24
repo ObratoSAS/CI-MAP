@@ -1,0 +1,10 @@
+{
+  "landing": "Home",
+  "catalog": "Catalog",
+  "dashboard": "Dashboard",
+  "calendar": "Calendar",
+  "messages": "Messages",
+  "admin": "Admin",
+  "logout": "Sign out",
+  "login": "Login"
+}

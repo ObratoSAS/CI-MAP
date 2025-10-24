@@ -1,0 +1,13 @@
+{
+  "title": "Calendar",
+  "views": {
+    "month": "Month",
+    "week": "Week"
+  },
+  "empty": "No events scheduled.",
+  "types": {
+    "session": "Session",
+    "meeting": "Meeting",
+    "reminder": "Reminder"
+  }
+}

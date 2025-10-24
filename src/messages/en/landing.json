@@ -1,0 +1,16 @@
+{
+  "hero": {
+    "title": "Reimagine collaborative learning",
+    "subtitle": "Aurora LMS empowers institutions with modern, inclusive experiences inspired by Moodle with a contemporary stack.",
+    "cta": "Explore courses"
+  },
+  "benefits": {
+    "title": "Why teams choose Aurora",
+    "items": [
+      "Personalized dashboards for every role",
+      "Integrated communication and calendar",
+      "Insightful analytics and grade management"
+    ]
+  },
+  "cardDescription": "A curated learning path combining collaborative activities, synchronous sessions and insightful analytics."
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Calendario",
+  "views": {
+    "month": "Mes",
+    "week": "Semana"
+  },
+  "empty": "No hay eventos programados.",
+  "types": {
+    "session": "Sesión",
+    "meeting": "Reunión",
+    "reminder": "Recordatorio"
+  }
+}

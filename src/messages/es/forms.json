@@ -1,0 +1,7 @@
+{
+  "required": "Este campo es obligatorio",
+  "email": "Ingresa un correo válido",
+  "min": "Ingresa al menos {count} caracteres",
+  "max": "Ingresa máximo {count} caracteres",
+  "success": "Cambios guardados"
+}

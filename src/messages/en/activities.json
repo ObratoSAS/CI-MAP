@@ -1,0 +1,26 @@
+{
+  "assignment": {
+    "title": "Assignment",
+    "submit": "Submit assignment",
+    "upload": "Upload file",
+    "status": "Submission status",
+    "feedback": "Feedback"
+  },
+  "quiz": {
+    "title": "Quiz",
+    "start": "Start attempt",
+    "timer": "Time remaining",
+    "submit": "Submit quiz",
+    "review": "Review attempt"
+  },
+  "forum": {
+    "title": "Forum",
+    "newThread": "New thread",
+    "reply": "Reply",
+    "moderation": "Moderation"
+  },
+  "resource": {
+    "title": "Resource",
+    "download": "Download"
+  }
+}
