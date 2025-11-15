@@ -1,0 +1,531 @@
+<!DOCTYPE html >
+< html  lang =" es " >
+< encabezado >
+    < meta  charset =" UTF-8 " >
+    < meta  name =" viewport " content =" width=device-width, initial-scale=1.0 " >
+    < título > CI-MAP | Corporación de Innovación y Mejoramiento Académico y Profesional </title>
+    < link  href =" https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Nunito:wght@300;400;600&display=swap " rel =" stylesheet " >
+    < estilo >
+        : raíz {
+            --cimap-dark :  # 0D2A58 ;
+            --cimap-blue :  # 008DDA ;
+            --cimap-light :  # E9F5FF ;
+            --cimap-gradient :  gradiente-lineal ( 135 grados ,  # 0D2A58  0 % ,  # 008DDA  60 % ,  # 53D9FF  100 % );
+            --text-color :  # 162032 ;
+        }
+        * {
+            tamaño de caja : caja con borde;
+            margen :  0 ;
+            relleno :  0 ;
+        }
+        cuerpo {
+            font-family :  'Montserrat' , sans-serif;
+            color :  var ( --color-texto );
+            color de fondo :  # f7fbff ;
+            altura de línea :  1.6 ;
+        }
+        encabezado {
+            fondo :  var ( -cimap-gradient );
+            color :  #fff ;​
+            relleno :  1,5 rem  8 vw ;
+            pantalla : flexible;
+            justificar-contenido : espacio-entre;
+            alinear elementos : centro;
+            posición : fija;
+            superior :  0 ;
+            índice z :  999 ;
+            box -shadow :  0  10px 30px  rgba ( 0 , 0 ,  0 , 0.15 ) ;
+        }
+        .logo {​
+            pantalla : flexible;
+            alinear elementos : centro;
+            espacio :  1 rem ;
+        }
+        . logo  h1 {
+            tamaño de fuente :  1.4 rem ;
+            espaciado entre letras :  1 px ;
+        }
+        navegación  ul {
+            estilo de lista : ninguno;
+            pantalla : flexible;
+            espacio :  1,5 rem ;
+        }
+        navegar  a {
+            color :  #fff ;​
+            decoración de texto : ninguna;
+            peso de la fuente :  500 ;
+            transición : opacidad 0.3 s suavidad;
+        }
+        navegación  a : hover {
+            opacidad :  0,7 ;
+        }
+        . héroe {
+            visualización : cuadrícula;
+            grid-template-columns :  repetir ( auto-fit ,  minmax ( 300px ,  1fr ) );
+            alinear elementos : centro;
+            espacio :  2 rem ;
+            relleno :  4 rem  8 vw  5 rem ;
+            fondo :  degradado radial (círculo en la parte superior derecha ,  rgba ( 83 , 217 , 255 , 0.25 ) , transparente 35 % ) ,  # f0f6ff ;
+        }
+        . héroe  h2 {
+            tamaño-fuente :  clamp ( 2.2 rem ,  5 vw ,  3.4 rem );
+            color :  var ( --cimap-dark );
+            margen inferior :  1 rem ;
+        }
+        . héroe  p {
+            font-family :  'Nunito' , sans-serif;
+            margen inferior :  2 rem ;
+            tamaño de fuente :  1,05 rem ;
+        }
+        . acciones-de-héroe {
+            pantalla : flexible;
+            flex-wrap : envolver;
+            espacio :  1 rem ;
+        }
+        .btn {​
+            relleno :  0,9 rem  1,8 rem ;
+            radio de borde :  999 px ;
+            borde : ninguno;
+            peso de la fuente :  600 ;
+            tamaño de fuente :  1 rem ;
+            cursor : puntero;
+            transición : transformación 0.3 s ease , box-shadow 0.3 s ease;
+        }
+        .btn -primary {
+            fondo :  var ( -cimap-gradient );
+            color :  #fff ;​
+            box -shadow :  0  15px 25px  rgba ( 0 , 141 ,  218 , 0.35 ) ;   
+        }
+        .btn -outline {
+            fondo : transparente;
+            color :  var ( --cimap-dark );
+            borde :  2 px var sólido ( -cimap-dark );
+        }
+        .btn : hover {​
+            transformar :  traslaciónY ( -3px ) ;
+        }
+        .card -grid {
+            visualización : cuadrícula;
+            grid-template-columns :  repetir ( auto-fit ,  minmax ( 220px ,  1fr ) );
+            espacio :  1,5 rem ;
+            margen superior :  2,5 rem ;
+        }
+        . tarjeta {
+            fondo :  # fff ;
+            radio de borde :  20 px ;
+            relleno :  1,8 rem ;
+            box -shadow :  0  15px 35px  rgba ( 13 , 42 ,  88 , 0.12 ) ;
+            borde superior :  5 px sólido transparente;
+            transición : transformación 0.3 s ease , color de borde 0.3 s ease;
+        }
+        .card : hover {​
+            transformar :  traslaciónY ( -8px ) ;
+            color del borde :  var ( -cimap-blue );
+        }
+        . sección {
+            acolchado :  4,5 rem  8 vw ;
+        }
+        . título-de-la-sección {
+            transformación de texto : mayúsculas;
+            espaciado entre letras :  4 px ;
+            color :  var ( --cimap-blue );
+            tamaño de fuente :  0,9 rem ;
+            margen inferior :  0,5 rem ;
+            peso de la fuente :  700 ;
+        }
+        . sección  h3 {
+            tamaño-fuente :  clamp ( 1.8 rem ,  4 vw ,  2.8 rem );
+            margen inferior :  1,5 rem ;
+            color :  var ( --cimap-dark );
+        }
+        . programas {
+            fondo :  # fff ;
+        }
+        . tarjeta-de-programa {
+            posición : relativa;
+            desbordamiento : oculto;
+        }
+        .program -card  h4 {
+            tamaño de fuente :  1,15 rem ;
+            margen inferior :  0,5 rem ;
+        }
+        . tarjeta-programa  span {
+            tamaño de fuente :  0,9 rem ;
+            peso de la fuente :  600 ;
+            color :  var ( --cimap-blue );
+        }
+        . tarjeta-programa :: después {
+            contenido :  "" ;
+            posición : absoluta;
+            recuadro :  0 ;
+            fondo :  gradiente lineal ( 135 grados ,  rgba ( 13 , 42 , 88 , 0.05 ) ,  rgba ( 83 , 217 , 255 , 0.3 ));
+            opacidad :  0 ;
+            transición : opacidad 0.3 s suavidad;
+        }
+        .program -card : hover :: después {
+            opacidad :  1 ;
+        }
+        . números {
+            fondo :  var ( -cimap-gradient );
+            color :  #fff ;​
+            visualización : cuadrícula;
+            grid-template-columns :  repetir ( auto-fit ,  minmax ( 200px ,  1fr ) );
+            espacio :  2 rem ;
+        }
+        . números  div {
+            alineación del texto : centro;
+        }
+        . números  fuertes {
+            tamaño de fuente :  2,8 rem ;
+            pantalla : bloque;
+        }
+        . testimonios {
+            fondo :  var ( -cimap-light );
+        }
+        . tarjeta-de-testimonio {
+            fondo :  # fff ;
+            radio de borde :  15 px ;
+            relleno :  1,5 rem ;
+            box - shadow :  0  10px 25px  rgba  ( 13 , 42 , 88 , 0.1 ) ;
+            font-family :  'Nunito' , sans-serif;
+        }
+        . tarjeta-de-testimonio  p {
+            estilo de fuente : cursiva;
+            margen inferior :  1 rem ;
+        }
+        . tarjeta-de-testimonio  h5 {
+            color :  var ( --cimap-dark );
+        }
+        .cta {​
+            fondo :  var ( -cimap-gradient );
+            radio de borde :  30 px ;
+            relleno :  3 rem ;
+            color :  #fff ;​
+            alineación del texto : centro;
+            box -shadow :  0  20px 40px  rgba ( 13 , 42 ,  88 , 0.25 ) ;
+        }
+        .cta h3 {​ 
+            color :  #fff ;​
+            margen inferior :  1 rem ;
+        }
+        pie de página {
+            fondo :  # 0B1E3B ;
+            color :  # c7d5ff ;
+            relleno :  2 rem  8 vw ;
+        }
+        pie de página .cuadrícula -pie de página {
+            visualización : cuadrícula;
+            grid-template-columns :  repetir ( auto-fit ,  minmax ( 220px ,  1fr ) );
+            espacio :  2 rem ;
+        }
+        pie de página  h4 {
+            margen inferior :  1 rem ;
+        }
+        pie de página  ul {
+            estilo de lista : ninguno;
+        }
+        pie de página  li {
+            margen inferior :  0,5 rem ;
+        }
+        pie de página  a {
+            color :  # c7d5ff ;
+            decoración de texto : ninguna;
+        }
+        forma {
+            pantalla : flexible;
+            dirección flexible : columna;
+            espacio :  0,6 rem ;
+        }
+        entrada ,  selección ,  área de texto {
+            font-family :  'Nunito' , sans-serif;
+            relleno :  0,75 rem  1 rem ;
+            borde :  1 px sólido # cbd6f0 ;
+            radio de borde :  12 px ;
+            fondo :  # f9fbff ;
+            transición : border-color 0.3 s ease , box-shadow 0.3 s ease;
+        }
+        input : focus ,  select : focus ,  textarea : focus {
+            color del borde :  var ( -cimap-blue );
+            esquema : ninguno;
+            box -shadow :  0  0  0  3px rgba  ( 0 , 141 , 218 , 0.15 );
+        }
+        . tarjeta-de-contacto {
+            pantalla : flexible;
+            espacio :  1 rem ;
+            alinear elementos : centro;
+            margen inferior :  1 rem ;
+        }
+        .contact -card  span {
+            tamaño de fuente :  2 rem ;
+            color :  var ( --cimap-blue );
+        }
+        @media ( max-width :  768 px ) {
+            encabezado {
+                dirección flexible : columna;
+                espacio :  1 rem ;
+            }
+            navegación  ul {
+                flex-wrap : envolver;
+                justificar-contenido : centro;
+            }
+            .cta {​
+                relleno :  2 rem  1,5 rem ;
+            }
+        }
+    </style>​​
+</head>​​
+< cuerpo >
+    < encabezado >
+        < div  class =" logo " >
+            < svg  width =" 50 " height =" 50 " viewBox =" 0 0 100 100 " aria-hidden =" true " >
+                <defs>​​
+                    < linearGradient  id =" logoGradient " x1 =" 0% " y1 =" 0% " x2 =" 100% " y2 =" 100% " >
+                        < stop  offset =" 0% " stop-color =" #0D2A58 " />
+                        < stop  offset =" 50% " stop-color =" #007ACC " />
+                        < stop  offset =" 100% " stop-color =" #53D9FF " />
+                    </linearGradient>​​
+                </defs>​​
+                < path  fill =" url(#logoGradient) " d =" M15 15h18l12 30 12-30h18l-30 70h-0.5z " opacity =" 0.9 " />
+                < path  fill =" url(#logoGradient) " d =" M15 15v70h15v-20h10v-15H30V30h10V15z " opacity =" 0.7 " />
+            </svg>​​
+            < div >
+                <h1> CI - MAP </h1>​​
+                < p > Corporación de Innovación y Mejoramiento Académico y Profesional </ p >
+            </div>​​
+        </div>​​
+        < navegación >
+            <ul>​​
+                < li > < a  href =" #programas " > Programas </ a > </ li >
+                < li > < a  href =" #servicios " > Servicios </ a > </ li >
+                < li > < a  href =" #impacto " > Impacto </ a > </ li >
+                < li > < a  href =" #contacto " > Contacto </ a > </ li >
+            </ul>​​
+        </nav>​​
+    </ encabezado >
+
+    < sección  clase =" héroe " >
+        < div >
+            < h2 > Impulsamos el talento con formación de alto impacto </ h2 >
+            < p > En CI-MAP Corporación de Innovación y Mejoramiento Académico y Profesional diseñamos experiencias educativas que conectan la teoría con la práctica a través de cursos, diplomados, capacitaciones y programas técnicos laborales orientados al desarrollo real de habilidades. </p>​​
+            < div  class =" hero-actions " >
+                < botón  clase =" btn btn-primary " > Explorar oferta académica </ botón >
+                < botón  clase =" btn btn-outline " > Agendar asesoría </ botón >
+            </div>​​
+        </div>​​
+        < div  class =" card-grid " >
+            < div  class =" card " >
+                < h4 > +120 programas vigentes </ h4 >
+                < p > Catálogo actualizado constantemente con tendencias educativas globales. </p>​​
+            </div>​​
+            < div  class =" card " >
+                < h4 > Mentores expertos </ h4 >
+                < p > Docentes con trayectoria profesional y certificaciones internacionales. </p>​​
+            </div>​​
+            < div  class =" card " >
+                < h4 > Metodologías ágiles </ h4 >
+                < p > Aprendizaje inmersivo, proyectos reales y seguimiento personalizado. </p>​​
+            </div>​​
+        </div>​​
+    </ sección >
+
+    < sección  id =" servicios " clase =" sección " >
+        < abarca  clase =" sección-título " > Servicios integrales </ abarca >
+        < h3 > Soluciones formativas para personas y organizaciones </ h3 >
+        < div  class =" card-grid " >
+            < div  class =" card program-card " >
+                < h4 > Diplomados ejecutivos </ h4 >
+                < p > Programas intensivos con módulos especializados, acompañamiento académico y certificación profesional. </p>​​
+                < span > Modalidad presencial, virtual y semipresencial </ span >
+            </div>​​
+            < div  class =" card program-card " >
+                < h4 > Cursos y microcredenciales </ h4 >
+                < p > Formaciones ágiles de corta duración enfocadas en competencias digitales, liderazgo y operación técnica. </p>​​
+                < span > Desde 12 hasta 60 horas </ span >
+            </div>​​
+            < div  class =" card program-card " >
+                < h4 > Capacitaciones empresariales </ h4 >
+                < p > Diseñamos academias corporativas, inducciones y planes de actualización a la medida de cada equipo. </p>​​
+                < span > Consultor experto + diagnósticos </ span >
+            </div>​​
+            < div  class =" card program-card " >
+                < h4 > Técnicos laborales por competencias </ h4 >
+                < p > Programas avalados que conectan con oportunidades reales de empleo y emprendimiento. </p>​​
+                < span > Prácticas garantizadas </ span >
+            </div>​​
+        </div>​​
+    </ sección >
+
+    < sección  id =" programas " clase =" sección programas " >
+        < abarca  clase =" sección-título " > Oferta académica </ abarca >
+        < h3 > Líneas de conocimiento para transformar el futuro </ h3 >
+        < div  class =" card-grid " >
+            < div  class =" card " >
+                < h4 > Innovación y Tecnología </ h4 >
+                < p > Transformación digital, desarrollo web, análisis de datos, ciberseguridad y automatización. </p>​​
+                <ul>​​
+                    <li> Bootcamp Full Stack </li>​​
+                    < li > Diplomado en Transformación Digital </ li >
+                    < li > Técnico en Sistemas </ li >
+                </ul>​​
+            </div>​​
+            < div  class =" card " >
+                < h4 > Salud y Bienestar </ h4 >
+                < p > Programas técnicos y cursos certificados para el sector salud, primeros auxilios y seguridad ocupacional. </p>​​
+                <ul>​​
+                    < li > Técnico Laboral en Enfermería </ li >
+                    < li > Curso de Soporte Vital Básico </ li >
+                    < li > Diplomado en Seguridad y Salud en el Trabajo </ li >
+                </ul>​​
+            </div>​​
+            < div  class =" card " >
+                < h4 > Negocios & Liderazgo </ h4 >
+                < p > Formaciones estratégicas en gerencia, talento humano, marketing y finanzas. </p>​​
+                <ul>​​
+                    < li > Diplomado en Gerencia de Proyectos </ li >
+                    < li > Curso de Inteligencia Comercial </ li >
+                    < li > Técnico en Asistencia Administrativa </ li >
+                </ul>​​
+            </div>​​
+            < div  class =" card " >
+                < h4 > Educación y Desarrollo Humano </ h4 >
+                < p > Modelos pedagógicos, neuroeducación y acompañamiento socioemocional para docentes y directivos. </p>​​
+                <ul>​​
+                    < li > Diplomado en Innovación Educativa </ li >
+                    < li > Capacitación en Evaluación por Competencias </ li >
+                    < li > Curso de Habilidades Socioemocionales </ li >
+                </ul>​​
+            </div>​​
+        </div>​​
+    </ sección >
+
+    < sección  id =" impacto " clase =" números de sección " >
+        < div >
+            <strong> 15+ </strong>​​​​
+            < p > Años innovando en educación integral </ p >
+        </div>​​
+        < div >
+            <strong> 24k </strong>​​​​
+            < p > Personas certificadas en Latinoamérica </ p >
+        </div>​​
+        < div >
+            <strong> 150 </strong>​​​​
+            < p > Convenios con empresas y organizaciones </ p >
+        </div>​​
+        < div >
+            <strong> 95 % </strong>​​​
+            < p > Satisfacción promedio de nuestros estudiantes </ p >
+        </div>​​
+    </ sección >
+
+    < section  class =" section testimonials " >
+        < span  class =" section -title " > Experiencias CI- MAP </span>
+        < h3 > Historias que inspiran nuevos comienzos </ h3 >
+        < div  class =" card-grid " >
+            < div  class =" testimonial-card " >
+                < p > "En CI-MAP encontré un equipo que escucha, acompaña y potencia cada proyecto. El diplomado me dio herramientas concretas para liderar procesos de transformación". </p>​​
+                < h5 > Laura Fuentes · Directora Académica </ h5 >
+            </div>​​
+            < div  class =" testimonial-card " >
+                < p > “La modalidad blended de su técnico laboral me permitió trabajar y estudiar al tiempo. Hoy hago parte de la bolsa de empleo de la corporación.” </p>​​
+                < h5 > Carlos Márquez · Egresado Técnico </ h5 >
+            </div>​​
+            < div  class =" testimonial-card " >
+                < p > “Diseñaron una ruta de capacitación exclusiva para nuestro equipo de ventas. En solo tres meses los indicadores comerciales crecieron 27%.” </p>​​
+                < h5 > Mariana Rueda · Gerente Comercial </ h5 >
+            </div>​​
+        </div>​​
+    </ sección >
+
+    < sección  clase =" sección " >
+        < div  class =" cta " >
+            < span  class =" section-title " style =" color:#fff; letter-spacing:3px; " > Transforma tu trayectoria </span>
+            < h3 > ¿Listo para llevar tu talento al siguiente nivel? </h3>​​
+            < p > Comparte tus objetivos y diseñamos un plan académico personalizado que integre mentorías, certificaciones y prácticas profesionales. </p>​​
+            < div  class =" hero-actions " style =" justify-content: center; margin-top: 1.5rem; " >
+                < button  class =" btn btn-outline " style =" border -color:#fff;color:#fff; " > Descargar portafolio </button>
+                < botón  clase =" btn btn-primary " > Hablar con un asesor </ botón >
+            </div>​​
+        </div>​​
+    </ sección >
+
+    < section  id =" contacto " class =" section " style =" padding-bottom: 3rem; " >
+        < span  class =" section - title " > Contáctanos </span>
+        < h3 > Estamos a un mensaje de distancia </ h3 >
+        < div  class =" card-grid " >
+            < div  class =" card " >
+                < div  class =" contact-card " >
+                    < span > 📍 </ span >
+                    < div >
+                        < h4 > Sede principal </ h4 >
+                        < p > Calle 45 # 18 - 50 · Bogotá, Colombia </ p >
+                    </div>​​
+                </div>​​
+                < div  class =" contact-card " >
+                    < span > 📞 </ span >
+                    < div >
+                        <h4> Llámanos </h4>​​​​
+                        <p> +57 (1 ) 555 0193 · +57 320 555 0193 </p>
+                    </div>​​
+                </div>​​
+                < div  class =" contact-card " >
+                    < span > ✉️ </ span >
+                    < div >
+                        <h4> Escríbenos </h4>​​​​
+                        <p> admisiones@cimap.edu.co </p>​​​​
+                    </div>​​
+                </div>​​
+            </div>​​
+            < div  class =" card " >
+                < h4 > Agenda una asesoría personalizada </ h4 >
+                < formulario >
+                    < etiqueta > Nombre completo </ etiqueta >
+                    < input  type =" text " placeholder =" Ingresa tu nombre " required >
+                    < etiqueta > Correo electrónico </ etiqueta >
+                    < input  type =" email " placeholder =" nombre@correo.com " required >
+                    < etiqueta > Programa de interés </ etiqueta >
+                    < seleccionar >
+                        <option> Cursos </option>​​​​
+                        <option> Diplomados </option>​​​​
+                        < opción > Capacitaciones empresariales </ opción >
+                        < opción > Técnicos laborales </ opción >
+                    </select>​​
+                    <label> Mensaje </label>​​​​
+                    < textarea  rows =" 4 " placeholder =" Cuéntanos tus objetivos " > </ textarea >
+                    < button  type =" submit " class =" btn btn-primary " style = " width : 100%; margin-top:1rem; " > Enviar solicitud </button>
+                </form>​​
+            </div>​​
+        </div>​​
+    </ sección >
+
+    < pie de página >
+        < div  class =" footer-grid " >
+            < div >
+                <h4> CI - MAP </h4>​​
+                < p > Corporación de Innovación y Mejoramiento Académico y Profesional. </p>​​
+            </div>​​
+            < div >
+                < h4 > Programas </ h4 >
+                <ul>​​
+                    < li > < a  href =" # " > Tecnología </ a > </ li >
+                    < li > < a  href =" # " > Salud </ a > </ li >
+                    < li > < a  href =" # " > Negocios </ a > </ li >
+                    < li > < a  href =" # " > Educación </ a > </ li >
+                </ul>​​
+            </div>​​
+            < div >
+                <h4> Servicios </h4>​​​​
+                <ul>​​
+                    < li > < a  href =" # " > Consultoría académica </ a > </ li >
+                    < li > < a  href =" # " > Alianzas institucionales </ a > </ li >
+                    < li > < a  href =" # " > Certificaciones </ a > </ li >
+                </ul>​​
+            </div>​​
+            < div >
+                <h4> Conecta </h4>​​​​
+                <p> LinkedIn · Facebook · Instagram </p>
+            </div>​​
+        </div>​​
+        < p  style =" margin-top:2rem; text-align:center; font-size:0.9rem; " > © 2024 CI-MAP. Todos los derechos reservados. </p>​​
+    </ pie de página >
+</body>​​
+</html>
