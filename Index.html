@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CI-MAP | Corporación de Innovación y Mejoramiento Académico y Profesional</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cimap-dark: #0D2A58;
+            --cimap-blue: #008DDA;
+            --cimap-light: #E9F5FF;
+            --cimap-gradient: linear-gradient(135deg, #0D2A58 0%, #008DDA 60%, #53D9FF 100%);
+            --text-color: #162032;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-color);
+            background-color: #f7fbff;
+            line-height: 1.6;
+        }
+        header {
+            background: var(--cimap-gradient);
+            color: #fff;
+            padding: 1.5rem 8vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .logo h1 {
+            font-size: 1.4rem;
+            letter-spacing: 1px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s ease;
+        }
+        nav a:hover {
+            opacity: 0.7;
+        }
+        .hero {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            align-items: center;
+            gap: 2rem;
+            padding: 4rem 8vw 5rem;
+            background: radial-gradient(circle at top right, rgba(83,217,255,0.25), transparent 35%), #f0f6ff;
+        }
+        .hero h2 {
+            font-size: clamp(2.2rem, 5vw, 3.4rem);
+            color: var(--cimap-dark);
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-family: 'Nunito', sans-serif;
+            margin-bottom: 2rem;
+            font-size: 1.05rem;
+        }
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .btn {
+            padding: 0.9rem 1.8rem;
+            border-radius: 999px;
+            border: none;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .btn-primary {
+            background: var(--cimap-gradient);
+            color: #fff;
+            box-shadow: 0 15px 25px rgba(0, 141, 218, 0.35);
+        }
+        .btn-outline {
+            background: transparent;
+            color: var(--cimap-dark);
+            border: 2px solid var(--cimap-dark);
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+        }
+        .card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 1.8rem;
+            box-shadow: 0 15px 35px rgba(13,42,88,0.12);
+            border-top: 5px solid transparent;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: var(--cimap-blue);
+        }
+        .section {
+            padding: 4.5rem 8vw;
+        }
+        .section-title {
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--cimap-blue);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        .section h3 {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            margin-bottom: 1.5rem;
+            color: var(--cimap-dark);
+        }
+        .programs {
+            background: #fff;
+        }
+        .program-card {
+            position: relative;
+            overflow: hidden;
+        }
+        .program-card h4 {
+            font-size: 1.15rem;
+            margin-bottom: 0.5rem;
+        }
+        .program-card span {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--cimap-blue);
+        }
+        .program-card::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(13,42,88,0.05), rgba(83,217,255,0.3));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .program-card:hover::after {
+            opacity: 1;
+        }
+        .numbers {
+            background: var(--cimap-gradient);
+            color: #fff;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+        .numbers div {
+            text-align: center;
+        }
+        .numbers strong {
+            font-size: 2.8rem;
+            display: block;
+        }
+        .testimonials {
+            background: var(--cimap-light);
+        }
+        .testimonial-card {
+            background: #fff;
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 25px rgba(13,42,88,0.1);
+            font-family: 'Nunito', sans-serif;
+        }
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+        .testimonial-card h5 {
+            color: var(--cimap-dark);
+        }
+        .cta {
+            background: var(--cimap-gradient);
+            border-radius: 30px;
+            padding: 3rem;
+            color: #fff;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(13,42,88,0.25);
+        }
+        .cta h3 {
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+        footer {
+            background: #0B1E3B;
+            color: #c7d5ff;
+            padding: 2rem 8vw;
+        }
+        footer .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+        }
+        footer h4 {
+            margin-bottom: 1rem;
+        }
+        footer ul {
+            list-style: none;
+        }
+        footer li {
+            margin-bottom: 0.5rem;
+        }
+        footer a {
+            color: #c7d5ff;
+            text-decoration: none;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+        input, select, textarea {
+            font-family: 'Nunito', sans-serif;
+            padding: 0.75rem 1rem;
+            border: 1px solid #cbd6f0;
+            border-radius: 12px;
+            background: #f9fbff;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        input:focus, select:focus, textarea:focus {
+            border-color: var(--cimap-blue);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(0,141,218,0.15);
+        }
+        .contact-card {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        .contact-card span {
+            font-size: 2rem;
+            color: var(--cimap-blue);
+        }
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .cta {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <svg width="50" height="50" viewBox="0 0 100 100" aria-hidden="true">
+                <defs>
+                    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#0D2A58" />
+                        <stop offset="50%" stop-color="#007ACC" />
+                        <stop offset="100%" stop-color="#53D9FF" />
+                    </linearGradient>
+                </defs>
+                <path fill="url(#logoGradient)" d="M15 15h18l12 30 12-30h18l-30 70h-0.5z" opacity="0.9" />
+                <path fill="url(#logoGradient)" d="M15 15v70h15v-20h10v-15H30V30h10V15z" opacity="0.7" />
+            </svg>
+            <div>
+                <h1>CI-MAP</h1>
+                <p>Corporación de Innovación y Mejoramiento Académico y Profesional</p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#programas">Programas</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#impacto">Impacto</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h2>Impulsamos el talento con formación de alto impacto</h2>
+            <p>En CI-MAP Corporación de Innovación y Mejoramiento Académico y Profesional diseñamos experiencias educativas que conectan la teoría con la práctica a través de cursos, diplomados, capacitaciones y programas técnicos laborales orientados al desarrollo real de habilidades.</p>
+            <div class="hero-actions">
+                <button class="btn btn-primary">Explorar oferta académica</button>
+                <button class="btn btn-outline">Agendar asesoría</button>
+            </div>
+        </div>
+        <div class="card-grid">
+            <div class="card">
+                <h4>+120 programas vigentes</h4>
+                <p>Catálogo actualizado constantemente con tendencias educativas globales.</p>
+            </div>
+            <div class="card">
+                <h4>Mentores expertos</h4>
+                <p>Docentes con trayectoria profesional y certificaciones internacionales.</p>
+            </div>
+            <div class="card">
+                <h4>Metodologías ágiles</h4>
+                <p>Aprendizaje inmersivo, proyectos reales y seguimiento personalizado.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="section">
+        <span class="section-title">Servicios integrales</span>
+        <h3>Soluciones formativas para personas y organizaciones</h3>
+        <div class="card-grid">
+            <div class="card program-card">
+                <h4>Diplomados ejecutivos</h4>
+                <p>Programas intensivos con módulos especializados, acompañamiento académico y certificación profesional.</p>
+                <span>Modalidad presencial, virtual y blended</span>
+            </div>
+            <div class="card program-card">
+                <h4>Cursos y microcredenciales</h4>
+                <p>Formaciones ágiles de corta duración enfocadas en competencias digitales, liderazgo y operación técnica.</p>
+                <span>Desde 12 hasta 60 horas</span>
+            </div>
+            <div class="card program-card">
+                <h4>Capacitaciones empresariales</h4>
+                <p>Diseñamos academias corporativas, inducciones y planes de actualización a la medida de cada equipo.</p>
+                <span>Consultor experto + diagnósticos</span>
+            </div>
+            <div class="card program-card">
+                <h4>Técnicos laborales por competencias</h4>
+                <p>Programas avalados que conectan con oportunidades reales de empleo y emprendimiento.</p>
+                <span>Prácticas garantizadas</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="programas" class="section programs">
+        <span class="section-title">Oferta académica</span>
+        <h3>Líneas de conocimiento para transformar el futuro</h3>
+        <div class="card-grid">
+            <div class="card">
+                <h4>Innovación & Tecnología</h4>
+                <p>Transformación digital, desarrollo web, analítica de datos, ciberseguridad y automatización.</p>
+                <ul>
+                    <li>Bootcamp Full Stack</li>
+                    <li>Diplomado en Transformación Digital</li>
+                    <li>Técnico en Sistemas</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>Salud y Bienestar</h4>
+                <p>Programas técnicos y cursos certificados para el sector salud, primeros auxilios y seguridad ocupacional.</p>
+                <ul>
+                    <li>Técnico Laboral en Enfermería</li>
+                    <li>Curso de Soporte Vital Básico</li>
+                    <li>Diplomado en Seguridad y Salud en el Trabajo</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>Negocios & Liderazgo</h4>
+                <p>Formaciones estratégicas en gerencia, talento humano, marketing y finanzas.</p>
+                <ul>
+                    <li>Diplomado en Gerencia de Proyectos</li>
+                    <li>Curso de Inteligencia Comercial</li>
+                    <li>Técnico en Asistencia Administrativa</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>Educación & Desarrollo Humano</h4>
+                <p>Modelos pedagógicos, neuroeducación y acompañamiento socioemocional para docentes y directivos.</p>
+                <ul>
+                    <li>Diplomado en Innovación Educativa</li>
+                    <li>Capacitación en Evaluación por Competencias</li>
+                    <li>Curso de Habilidades Socioemocionales</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="impacto" class="section numbers">
+        <div>
+            <strong>15+</strong>
+            <p>Años innovando en educación integral</p>
+        </div>
+        <div>
+            <strong>24k</strong>
+            <p>Personas certificadas en Latinoamérica</p>
+        </div>
+        <div>
+            <strong>150</strong>
+            <p>Convenios con empresas y organizaciones</p>
+        </div>
+        <div>
+            <strong>95%</strong>
+            <p>Satisfacción promedio de nuestros estudiantes</p>
+        </div>
+    </section>
+
+    <section class="section testimonials">
+        <span class="section-title">Experiencias CI-MAP</span>
+        <h3>Historias que inspiran nuevos comienzos</h3>
+        <div class="card-grid">
+            <div class="testimonial-card">
+                <p>“En CI-MAP encontré un equipo que escucha, acompaña y potencia cada proyecto. El diplomado me dio herramientas concretas para liderar procesos de transformación.”</p>
+                <h5>Laura Fuentes · Directora Académica</h5>
+            </div>
+            <div class="testimonial-card">
+                <p>“La modalidad blended de su técnico laboral me permitió trabajar y estudiar al tiempo. Hoy hago parte de la bolsa de empleo de la corporación.”</p>
+                <h5>Carlos Márquez · Egresado Técnico</h5>
+            </div>
+            <div class="testimonial-card">
+                <p>“Diseñaron una ruta de capacitación exclusiva para nuestro equipo de ventas. En solo tres meses los indicadores comerciales crecieron 27%.”</p>
+                <h5>Mariana Rueda · Gerente Comercial</h5>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="cta">
+            <span class="section-title" style="color:#fff; letter-spacing:3px;">Transforma tu trayectoria</span>
+            <h3>¿Listo para llevar tu talento al siguiente nivel?</h3>
+            <p>Comparte tus objetivos y diseñamos un plan académico personalizado que integre mentorías, certificaciones y prácticas profesionales.</p>
+            <div class="hero-actions" style="justify-content: center; margin-top: 1.5rem;">
+                <button class="btn btn-outline" style="border-color:#fff;color:#fff;">Descargar portafolio</button>
+                <button class="btn btn-primary">Hablar con un asesor</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="section" style="padding-bottom: 3rem;">
+        <span class="section-title">Contáctanos</span>
+        <h3>Estamos a un mensaje de distancia</h3>
+        <div class="card-grid">
+            <div class="card">
+                <div class="contact-card">
+                    <span>📍</span>
+                    <div>
+                        <h4>Sede principal</h4>
+                        <p>Calle 45 # 18 - 50 · Bogotá, Colombia</p>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <span>📞</span>
+                    <div>
+                        <h4>Llámanos</h4>
+                        <p>+57 (1) 555 0193 · +57 320 555 0193</p>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <span>✉️</span>
+                    <div>
+                        <h4>Escríbenos</h4>
+                        <p>admisiones@cimap.edu.co</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <h4>Agenda una asesoría personalizada</h4>
+                <form>
+                    <label>Nombre completo</label>
+                    <input type="text" placeholder="Ingresa tu nombre" required>
+                    <label>Correo electrónico</label>
+                    <input type="email" placeholder="nombre@correo.com" required>
+                    <label>Programa de interés</label>
+                    <select>
+                        <option>Cursos</option>
+                        <option>Diplomados</option>
+                        <option>Capacitaciones empresariales</option>
+                        <option>Técnicos laborales</option>
+                    </select>
+                    <label>Mensaje</label>
+                    <textarea rows="4" placeholder="Cuéntanos tus objetivos"></textarea>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top:1rem;">Enviar solicitud</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h4>CI-MAP</h4>
+                <p>Corporación de Innovación y Mejoramiento Académico y Profesional.</p>
+            </div>
+            <div>
+                <h4>Programas</h4>
+                <ul>
+                    <li><a href="#">Tecnología</a></li>
+                    <li><a href="#">Salud</a></li>
+                    <li><a href="#">Negocios</a></li>
+                    <li><a href="#">Educación</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Servicios</h4>
+                <ul>
+                    <li><a href="#">Consultoría académica</a></li>
+                    <li><a href="#">Alianzas institucionales</a></li>
+                    <li><a href="#">Certificaciones</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Conecta</h4>
+                <p>LinkedIn · Facebook · Instagram</p>
+            </div>
+        </div>
+        <p style="margin-top:2rem; text-align:center; font-size:0.9rem;">© 2024 CI-MAP. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
